@@ -9,11 +9,16 @@ abstract class Failure extends Equatable {
   List<Object> get props => [message];
 }
 
-
-class ServerFailure extends Failure{
+class ServerFailure extends Failure {
   const ServerFailure(super.message);
 }
 
-class DatabaseFailure extends Failure{
+class DatabaseFailure extends Failure {
   const DatabaseFailure(super.message);
+}
+
+abstract class FailureTwo extends Equatable {
+  const FailureTwo([List properties = const <dynamic>[]]);
+   @override
+  List<Object> get props => [];
 }
